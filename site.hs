@@ -24,7 +24,7 @@ main = hakyllWith config $ do
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
         >>= relativizeUrls
 
-  create ["posts.html"] $ do
+  create ["index.html"] $ do
     route idRoute
     compile $ do
       posts <- recentFirst =<< loadAll "posts/*"
